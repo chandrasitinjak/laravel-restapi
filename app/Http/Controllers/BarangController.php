@@ -58,8 +58,8 @@ class BarangController extends Controller
     {
         $barang = new Barang();
 
-        $barang->name = $request->name_1;
-        $barang->desc = $request->desc_1;
+        $barang->name = $request->name;
+        $barang->desc = $request->desc;
         
         $barang->save();
         return "sukses menambahkan";        
