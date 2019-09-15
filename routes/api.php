@@ -17,9 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/create_barang', 'BarangController@store');
-Route::get('/getAllData', 'BarangController@getAllData');
+Route::post('/barangs', 'BarangController@store');
+Route::get('/barangs', 'BarangController@getAllData');
 
-// Route::get('/barang/{id}', 'BarangController@show');
-Route::post('/updateBarang/{id}', 'BarangController@update');
-Route::post('/deleteBarang/{id}', 'BarangController@destroy');
+Route::put('/barangs/{id}', 'BarangController@update');
+Route::delete('/barangs/{id}', 'BarangController@destroy');
+
+// Route::resource('/barangs', 'BarangController');
