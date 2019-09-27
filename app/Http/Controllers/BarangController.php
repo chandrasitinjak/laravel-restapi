@@ -15,6 +15,13 @@ class BarangController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+     public function detail_barang($id) {
+        $data = Barang::find($id);
+
+        return response()->json($data);
+     }
+     
+
     public function update(Request $request, $id)
     {
         $data = Barang::find($id);

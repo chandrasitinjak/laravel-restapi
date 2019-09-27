@@ -19,8 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/barangs', 'BarangController@store');
 Route::get('/barangs', 'BarangController@getAllData');
+Route::get('/barangs/{id}', 'BarangController@detail_barang');
 
 Route::put('/barangs/{id}', 'BarangController@update');
+// Route::patch('/barangs/{id}', 'BarangController@update');
+
 Route::delete('/barangs/{id}', 'BarangController@destroy');
 
 // Route::resource('/barangs', 'BarangController');
