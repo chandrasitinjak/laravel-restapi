@@ -19,11 +19,10 @@ class BarangController extends Controller
         $data = Barang::find($id);
 
         return response()->json($data);
-     }
-     
+    } 
 
     public function update(Request $request, $id)
-    {
+    {        
         $data = Barang::find($id);
 
         $data->name = $request->name;
@@ -31,7 +30,7 @@ class BarangController extends Controller
 
         $data->update();
 
-        return "sukses !!!";
+        return response()->json($data);
     }
 
     public function getAllData() {
